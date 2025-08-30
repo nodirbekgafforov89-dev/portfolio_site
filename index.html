@@ -1,99 +1,38 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nodirbek • Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulyator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="container header">
-    <a class="brand" href="index.html">Nodirbek<span>.</span></a>
-    <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
-    <nav id="nav">
-      <a class="active" href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div class="calc">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button>C</button>
+      <button>/</button>
+      <button>*</button>
+      <button>-</button>
 
-  <main>
-    <section class="container hero">
-      <img src="https://i.pravatar.cc/160?img=12" alt="Nodirbek avatar">
-      <div>
-        <h1 class="title">Assalomu alaykum! Men <span class="accent">Nodirbek</span> 👋</h1>
-        <p class="muted">Junior Web Developer. Frontend (HTML, CSS, JavaScript)ni o‘rganayman va amaliy loyihalar yarataman.</p>
-        <div class="cta">
-          <a class="btn" href="projects.html">Loyihalarim</a>
-          <a class="btn btn-outline" href="#skills">Ko‘nikmalar</a>
-        </div>
-      </div>
-    </section>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>+</button>
 
-    <section id="skills" class="container section">
-      <h2 class="section-title">Ko‘nikmalar</h2>
-      <div class="badges">
-        <span class="badge">HTML5</span>
-        <span class="badge">CSS3</span>
-        <span class="badge">JavaScript</span>
-        <span class="badge">Responsive</span>
-        <span class="badge">Git & GitHub</span>
-      </div>
-    </section>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>.</button>
 
-    <section class="container section">
-      <h2 class="section-title">So‘nggi ishlar</h2>
-      <div class="grid">
-        <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop" alt="Landing">
-          <div class="card-body">
-            <h3>Landing sahifa</h3>
-            <p class="muted">HTML + CSS bilan bir sahifalik promo sayt.</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="projects.html">Batafsil</a>
-            </div>
-          </div>
-        </article>
-        <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="JS demo">
-          <div class="card-body">
-            <h3>JS mini-app</h3>
-            <p class="muted">Matn o‘zgarishi, hisob-kitob va kichik interaktivlar.</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="projects.html">Batafsil</a>
-            </div>
-          </div>
-        </article>
-        <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?q=80&w=800&auto=format&fit=crop" alt="Blog">
-          <div class="card-body">
-            <h3>Mini blog</h3>
-            <p class="muted">Post kartalari bilan oddiy blog dizayni.</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="projects.html">Batafsil</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>=</button>
 
-    <section class="container section">
-      <div class="cta-banner">
-        <h2>Biror loyiha bormi? Keling boshlaymiz!</h2>
-        <a class="btn" href="contact.html">Bog‘lanish</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container footer">
-    <p>© 2025 • Nodirbek Gafforov</p>
-    <div class="links">
-      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+      <button>0</button>
     </div>
-  </footer>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
