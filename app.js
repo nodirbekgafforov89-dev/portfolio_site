@@ -2,8 +2,8 @@
 const btn = document.getElementById('changeTitleBtn');
 if (btn) {
   btn.addEventListener('click', () => {
-    const title = document.getElementById('title');
-    title.textContent = "Matn o'zgartirildi! 🚀";
+    const h2 = document.querySelector('main h2');
+    h2.textContent = "Matn o'zgartirildi! 🚀";
   });
 }
 
