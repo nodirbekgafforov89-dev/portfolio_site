@@ -3,100 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nodirbek • Portfolio</title>
-  <meta name="description" content="Nodirbek Gafforov — Junior Web Developer (HTML, CSS, JavaScript). Portfolio, loyihalar va aloqa.">
+  <title>Blog • Nodirbek</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../app.js" defer></script>
 </head>
 <body>
   <header class="container header">
-    <a class="brand" href="index.html">Nodirbek<span>.</span></a>
+    <a class="brand" href="../index.html">Nodirbek<span>.</span></a>
     <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
     <nav id="nav">
-      <a class="active" href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a class="active" href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
       <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙 Dark</button>
     </nav>
   </header>
 
-  <main>
-    <section class="container hero">
-      <img src="https://i.pravatar.cc/160?img=12" alt="Nodirbek avatar">
-      <div>
-        <h1 class="title">Assalomu alaykum! Men <span class="accent">Nodirbek</span> 👋</h1>
-        <p class="muted">Junior Web Developer. Frontend (HTML, CSS, JavaScript)ni o‘rganayman va amaliy loyihalar yarataman.</p>
-        <div class="cta">
-          <a class="btn" href="projects.html">Loyihalarim</a>
-          <a class="btn btn-outline" href="#skills">Ko‘nikmalar</a>
+  <main class="container section">
+    <h1 class="section-title">Blog</h1>
+    <div class="grid">
+      <article class="card">
+        <div class="card-body">
+          <h3>HTML nima?</h3>
+          <p class="muted">HTML — veb sahifalarning skeleti. Teglar va semantika haqida qisqacha.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="skills" class="container section">
-      <h2 class="section-title">Ko‘nikmalar</h2>
-      <div class="badges">
-        <span class="badge">HTML5</span>
-        <span class="badge">CSS3</span>
-        <span class="badge">JavaScript</span>
-        <span class="badge">Responsive</span>
-        <span class="badge">Git & GitHub</span>
-      </div>
-    </section>
-
-    <section class="container section">
-      <h2 class="section-title">So‘nggi ishlar</h2>
-      <div class="grid">
-        <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop" alt="Landing">
-          <div class="card-body">
-            <h3>Landing sahifa</h3>
-            <p class="muted">HTML + CSS bilan bir sahifalik promo sayt.</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="projects.html">Batafsil</a>
-            </div>
-          </div>
-        </article>
-        <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="JS demo">
-          <div class="card-body">
-            <h3>To‑Do & Kalkulyator</h3>
-            <p class="muted">JS bilan kichik interaktiv ilovalar.</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="projects.html#apps">Batafsil</a>
-            </div>
-          </div>
-        </article>
-        <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=800&auto=format&fit=crop" alt="Weather">
-          <div class="card-body">
-            <h3>Weather App</h3>
-            <p class="muted">Shahar bo‘yicha ob-havo (Open‑Meteo API).</p>
-            <div class="actions">
-              <a class="btn btn-outline" href="projects/weather/index.html" target="_blank">Live</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="container section">
-      <div class="cta-banner">
-        <h2>Biror loyiha bormi? Keling boshlaymiz!</h2>
-        <a class="btn" href="contact.html">Bog‘lanish</a>
-      </div>
-    </section>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3>CSS bilan responsive dizayn</h3>
+          <p class="muted">Flexbox, grid va media-queries — mobilga mos layout tayyorlash.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3>JavaScriptga kirish</h3>
+          <p class="muted">DOM, eventlar va fetch bilan API dan ma’lumot olish.</p>
+        </div>
+      </article>
+    </div>
   </main>
 
   <footer class="container footer">
     <p>© 2025 • Nodirbek Gafforov</p>
-    <div class="links">
-      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
-    </div>
   </footer>
 </body>
 </html>
