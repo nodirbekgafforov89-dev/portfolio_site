@@ -1,84 +1,50 @@
-/* ====== Base ====== */
-*{box-sizing:border-box}
-:root{
-  --bg:#f6f8fb;
-  --card:#ffffff;
-  --text:#222;
-  --muted:#667085;
-  --brand:#ff6b00;
-  --brand-2:#ff944d;
-  --border:#e6e9ef;
-}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
-  background: radial-gradient(1200px 800px at 20% -10%, #ffe6d3 0%, transparent 40%),
-              radial-gradient(1200px 800px at 120% 10%, #e0f2ff 0%, transparent 40%),
-              var(--bg);
-  color:var(--text);
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff3e6;
+  margin: 0;
+  padding: 0;
 }
 
-/* ====== Layout ====== */
-.container{max-width:980px;margin:0 auto;padding:24px}
-header{
-  position:sticky; top:0; z-index:10;
-  backdrop-filter: blur(8px);
-  background:rgba(255,255,255,.7);
-  border-bottom:1px solid var(--border);
+header {
+  background: #ffcccc;
+  padding: 15px;
+  text-align: center;
 }
-header .row{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-size:26px;font-weight:800;color:#e63b00;margin:0}
 
-/* ====== Nav ====== */
-nav a{
-  display:inline-block; padding:10px 14px; border-radius:10px;
-  color:#0b3d66; text-decoration:none; font-weight:600;
+header h1 {
+  color: #ff0000;
 }
-nav a:hover{background:#eef6ff}
 
-/* ====== Sections / cards ====== */
-section{margin:28px 0}
-h2{margin:0 0 10px;font-size:24px}
-p{color:var(--muted);line-height:1.65}
-
-/* Button */
-button{
-  background:linear-gradient(180deg,var(--brand),var(--brand-2));
-  color:#fff;border:0;border-radius:10px;padding:12px 18px;
-  font-weight:700; cursor:pointer; box-shadow:0 8px 20px rgba(255,107,0,.25);
-  transition:transform .15s ease, box-shadow .15s ease;
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
 }
-button:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(255,107,0,.35)}
-button:active{transform:translateY(0)}
 
-/* Cards grid (Projects) */
-.card-grid{
-  display:grid; gap:18px;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+nav a:hover {
+  text-decoration: underline;
 }
-.card{
-  background:var(--card); border:1px solid var(--border); border-radius:14px;
-  padding:18px; box-shadow:0 6px 18px rgba(12, 26, 75, .06);
+
+main {
+  padding: 20px;
 }
-.card h3{margin:0 0 8px}
-.card p{margin:0 0 12px}
 
-/* Contact form */
-form{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
-label{display:block;margin:14px 0 6px;font-weight:600}
-input,textarea{
-  width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:10px;
-  outline:none; background:#fbfcfe;
+button {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
 }
-input:focus,textarea:focus{border-color:#9bd0ff; box-shadow:0 0 0 4px #e6f3ff}
-.success{color:#0a0;margin-top:10px}
-.error{color:#d00;margin-top:10px}
 
-/* Footer */
-footer{border-top:1px solid var(--border); color:var(--muted); margin-top:32px}
+button:hover {
+  background-color: darkorange;
+}
 
-/* ====== Responsive tweaks ====== */
-@media (max-width:640px){
-  .brand{font-size:20px}
-  nav a{padding:8px 10px}
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffcccc;
+  margin-top: 20px;
 }
