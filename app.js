@@ -1,13 +1,15 @@
-// Sarlavhani almashtirish
-const btn = document.getElementById('changeTitleBtn');
-if (btn) {
-  btn.addEventListener('click', () => {
-    const h2 = document.querySelector('main h2');
-    h2.textContent = "Matn o'zgartirildi! 🚀";
-  });
-}
+// mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+if (menuBtn && nav) menuBtn.addEventListener('click', ()=> nav.classList.toggle('show'));
 
-// Contact forma tekshiruvi (frontend)
+// fade-in on scroll
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+},{threshold:.1});
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+// contact form demo validate
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -17,12 +19,11 @@ if (form) {
     const msg = document.getElementById('message').value.trim();
     const out = document.getElementById('formMsg');
 
-    if (name.length < 2) { out.textContent = "Ism juda qisqa."; out.className="error"; return; }
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { out.textContent = "Email noto‘g‘ri."; out.className="error"; return; }
-    if (msg.length < 5) { out.textContent = "Xabar juda qisqa."; out.className="error"; return; }
+    if (name.length < 2) return out.textContent = 'Ism juda qisqa.';
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return out.textContent = 'Email noto‘g‘ri.';
+    if (msg.length < 5) return out.textContent = 'Xabar juda qisqa.';
 
-    out.textContent = "Xabaringiz qabul qilindi! (demo)"; // Backend yo‘qligi uchun demo
-    out.className = "success";
+    out.textContent = 'Xabaringiz yuborildi! (demo)';
     form.reset();
   });
 }

@@ -3,46 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Loyihalar</title>
+  <title>Projects • Nodirbek</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="container">
-    <div class="row">
-      <h1 class="brand">Loyihalar</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <header class="container header">
+    <a class="brand" href="index.html">Nodirbek<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <div class="card-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=600" alt="Kod">
-        <h3>Oddiy Landing</h3>
-        <p>HTML + CSS bilan bir sahifalik sayt dizayni.</p>
-        <a class="btn-outline" href="#" target="_blank">Live</a>
+  <main>
+    <section class="container section">
+      <h1 class="section-title">Loyihalar</h1>
+      <div class="grid">
+        <article class="card fade">
+          <img src="https://images.unsplash.com/photo-1517512006864-7edc3b933137?q=80&w=800&auto=format&fit=crop" alt="Calc">
+          <div class="card-body">
+            <h3>Kalkulyator</h3>
+            <p class="muted">Oddiy JS kalkulyator. Mobilga mos.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop" alt="Todo">
+          <div class="card-body">
+            <h3>To‑do ro‘yxati</h3>
+            <p class="muted">Vazifalarni qo‘shish/o‘chirish, localStorage bilan.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade">
+          <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=800&auto=format&fit=crop" alt="Landing">
+          <div class="card-body">
+            <h3>Landing sahifa</h3>
+            <p class="muted">Mahsulot tanishtiruvchi zamonaviy landing.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=600" alt="JS">
-        <h3>Kalkulyator</h3>
-        <p>JavaScript bilan oddiy hisob-kitob ilovasi.</p>
-        <a class="btn-outline" href="#" target="_blank">Live</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1517512006864-7edc3b933137?q=80&w=600" alt="Blog">
-        <h3>Mini Blog</h3>
-        <p>Statik blog sahifasi — post kartalari va sahifalash.</p>
-        <a class="btn-outline" href="#" target="_blank">Live</a>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <footer class="container">© 2025. Nodirbek Gafforov.</footer>
+  <footer class="container footer">
+    <p>© 2025 • Nodirbek Gafforov</p>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
