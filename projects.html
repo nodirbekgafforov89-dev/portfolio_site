@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mening Loyihalarim</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loyihalar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Mening Loyihalarim</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="container">
+    <div class="row">
+      <h1 class="brand">Loyihalar</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Loyihalar</h2>
-      <ul>
-        <li>Portfolio sayti</li>
-        <li>Kichik calculator</li>
-        <li>Oddiy blog sahifasi</li>
-      </ul>
-    </section>
+  <main class="container">
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=600" alt="Kod">
+        <h3>Oddiy Landing</h3>
+        <p>HTML + CSS bilan bir sahifalik sayt dizayni.</p>
+        <a class="btn-outline" href="#" target="_blank">Live</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=600" alt="JS">
+        <h3>Kalkulyator</h3>
+        <p>JavaScript bilan oddiy hisob-kitob ilovasi.</p>
+        <a class="btn-outline" href="#" target="_blank">Live</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517512006864-7edc3b933137?q=80&w=600" alt="Blog">
+        <h3>Mini Blog</h3>
+        <p>Statik blog sahifasi — post kartalari va sahifalash.</p>
+        <a class="btn-outline" href="#" target="_blank">Live</a>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025. Mening ismim.</p>
-  </footer>
+  <footer class="container">© 2025. Nodirbek Gafforov.</footer>
 </body>
 </html>

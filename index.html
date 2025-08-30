@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mening Portfolioim</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Mening Portfolioim</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="container">
+    <div class="row">
+      <h1 class="brand">Mening Portfolioim</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
+    <section class="hero">
+      <img src="https://i.pravatar.cc/160?img=12" alt="Avatar">
+      <div>
+        <h2>Assalomu alaykum! Men Nodirbek 👋</h2>
+        <p>Junior Web Developer. Frontend (HTML, CSS, JavaScript)ni o‘rganayapman va amaliy loyihalar yarataman.</p>
+        <div class="cta">
+          <a class="btn-outline" href="projects.html">Loyihalarim</a>
+          <a class="btn" href="contact.html">Bog‘lanish</a>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2>Men haqimda</h2>
-      <p>Frontendni o‘rganayapman: HTML, CSS, JavaScript. Bu sayt — mening o‘quv portfolioim.</p>
-      <button onclick="changeTitle()">Sarlavhani o‘zgartir</button>
+      <p>Frontendni o‘rganayapman: HTML, CSS, JavaScript. Bu sayt — mening o‘quv portfoliom.</p>
+      <button id="changeTitleBtn" class="btn">Sarlavhani o‘zgartir</button>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025. Mening ismim.</p>
-  </footer>
+  <footer class="container">© 2025. Nodirbek Gafforov.</footer>
 </body>
 </html>
