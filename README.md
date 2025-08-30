@@ -1,32 +1,19 @@
-# 🌟 Mening Portfolio Saytim
+# 🌟 Nodirbek — Portfolio
 
-Assalomu alaykum!  
-Men **Nodirbek Gafforov**, Junior Web Developer’man. 🚀  
+Frontend (HTML, CSS, JavaScript) bo‘yicha o‘quv portfoliom.  
+Ichida kichik loyihalar: **Calculator**, **To‑Do**, **Weather App**.
 
-Frontend dasturlashni o‘rganayapman:  
-- **HTML**  
-- **CSS**  
-- **JavaScript**  
+## Strukturasi
+- `index.html`, `projects.html`, `contact.html` — asosiy sahifalar
+- `blog/` — oddiy blog sahifasi
+- `projects/calculator/` — kalkulyator
+- `projects/todo/` — to‑do ro‘yxati
+- `projects/weather/` — ob‑havo ilovasi (Open‑Meteo API, API key kerak emas)
+- `styles.css`, `app.js` — umumiy stil va skript
 
----
+## Ishga tushirish
+GitHub Pages: **Settings → Pages → Source: main / (root)** → Save  
+Link: `https://USERNAME.github.io/REPOSITORY_NAME/`
 
-## 🔗 Sayt havolasi
-👉 [Portfolio Saytimni ochish](https://nodirbekgafforov89-dev.github.io/portfolio_site/)
-
----
-
-## 📂 Bo‘limlar
-- 🏠 **Bosh sahifa**  
-- 💻 **Loyihalarim**  
-- 📞 **Aloqa**
-
----
-
-## 📌 Maqsadim
-✅ Mustaqil portfolio yaratish  
-✅ Frontend dasturlashni amaliyotda qo‘llash  
-✅ Kelajakda real loyihalarda ishlash  
-
----
-
-© 2025 | Nodirbek Gafforov
+## Kontakt formasi
+Hozircha **demo**. Keyingi bosqichda Formspree/EmailJSga ulanish mumkin.

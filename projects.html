@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects • Nodirbek</title>
+  <meta name="description" content="Frontend loyihalar: kalkulyator, to‑do, weather va landing sahifalar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header class="container header">
@@ -15,12 +17,14 @@
     <nav id="nav">
       <a href="index.html">Home</a>
       <a class="active" href="projects.html">Projects</a>
+      <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙 Dark</button>
     </nav>
   </header>
 
   <main>
-    <section class="container section">
+    <section class="container section" id="apps">
       <h1 class="section-title">Loyihalar</h1>
       <div class="grid">
         <article class="card fade">
@@ -29,7 +33,7 @@
             <h3>Kalkulyator</h3>
             <p class="muted">Oddiy JS kalkulyator. Mobilga mos.</p>
             <div class="actions">
-              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn" href="projects/calculator/index.html" target="_blank">Live</a>
               <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
             </div>
           </div>
@@ -38,22 +42,22 @@
         <article class="card fade">
           <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop" alt="Todo">
           <div class="card-body">
-            <h3>To‑do ro‘yxati</h3>
-            <p class="muted">Vazifalarni qo‘shish/o‘chirish, localStorage bilan.</p>
+            <h3>To‑Do ro‘yxati</h3>
+            <p class="muted">Vazifalarni qo‘shish/o‘chirish, LocalStorage bilan.</p>
             <div class="actions">
-              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn" href="projects/todo/index.html" target="_blank">Live</a>
               <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
             </div>
           </div>
         </article>
 
         <article class="card fade">
-          <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=800&auto=format&fit=crop" alt="Landing">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=800&auto=format&fit=crop" alt="Weather">
           <div class="card-body">
-            <h3>Landing sahifa</h3>
-            <p class="muted">Mahsulot tanishtiruvchi zamonaviy landing.</p>
+            <h3>Weather App</h3>
+            <p class="muted">Shahar bo‘yicha ob-havo (Open‑Meteo API, key kerak emas).</p>
             <div class="actions">
-              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn" href="projects/weather/index.html" target="_blank">Live</a>
               <a class="btn btn-outline" href="#" target="_blank">GitHub</a>
             </div>
           </div>
@@ -65,6 +69,5 @@
   <footer class="container footer">
     <p>© 2025 • Nodirbek Gafforov</p>
   </footer>
-  <script src="app.js"></script>
 </body>
 </html>

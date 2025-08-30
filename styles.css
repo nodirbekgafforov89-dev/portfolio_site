@@ -2,44 +2,58 @@
 *{box-sizing:border-box}
 :root{
   --bg:#f6f8fb; --card:#ffffff; --text:#1f2937; --muted:#6b7280;
-  --brand:#ff6b00; --brand2:#ff944d; --border:#e5e7eb;
+  --brand:#ff6b00; --brand2:#ff944d; --border:#e5e7eb; --link:#0b3d66;
+}
+body.dark{
+  --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#9ca3af;
+  --border:#1f2937; --link:#93c5fd; --brand:#22c55e; --brand2:#16a34a;
 }
 html,body{margin:0;padding:0;scroll-behavior:smooth}
 body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
   color:var(--text);
-  background: radial-gradient(1200px 800px at 15% -10%, #ffe6d3 0%, transparent 40%),
-             radial-gradient(1200px 800px at 120% 10%, #e0f2ff 0%, transparent 40%),
-             var(--bg);
+  background:
+    radial-gradient(1200px 800px at 15% -10%, #ffe6d3 0%, transparent 40%),
+    radial-gradient(1200px 800px at 120% 10%, #e0f2ff 0%, transparent 40%),
+    var(--bg);
+}
+body.dark{
+  background:
+    radial-gradient(1000px 700px at 10% -10%, rgba(34,197,94,.15) 0%, transparent 35%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(147,197,253,.2) 0%, transparent 35%),
+    var(--bg);
 }
 .container{max-width:1000px;margin:0 auto;padding:20px}
 
 /* Header */
 .header{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:16px;justify-content:space-between;
   backdrop-filter:blur(8px);background:rgba(255,255,255,.7);border-bottom:1px solid var(--border)}
+body.dark .header{background:rgba(15,23,42,.6)}
 .brand{font-size:24px;font-weight:800;color:#e63b00;text-decoration:none}
-.brand span{color:#ff944d}
+.brand span{color:var(--brand2)}
 nav{display:flex;gap:10px;align-items:center}
-nav a{padding:10px 14px;border-radius:10px;text-decoration:none;color:#0b3d66;font-weight:600}
-nav a:hover{background:#eef6ff}
-nav a.active{background:#eaf3ff}
-.menu{display:none;border:1px solid var(--border);background:#fff;border-radius:8px;padding:8px 10px}
+nav a{padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--link);font-weight:600}
+nav a:hover{background:rgba(147,197,253,.2)}
+nav a.active{background:rgba(147,197,253,.25)}
+.menu{display:none;border:1px solid var(--border);background:var(--card);border-radius:8px;padding:8px 10px}
+.theme-btn{border:1px solid var(--border);background:var(--card);border-radius:10px;padding:8px 12px;cursor:pointer}
 
 /* Hero */
 .hero{display:flex;gap:22px;align-items:center;border:1px solid var(--border);border-radius:16px;padding:26px;background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.95));box-shadow:0 10px 28px rgba(12,26,75,.08);margin-top:16px}
+body.dark .hero{background:linear-gradient(180deg,rgba(15,23,42,.85),rgba(15,23,42,.95))}
 .hero img{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 6px 16px rgba(0,0,0,.08)}
 .title{margin:0 0 6px}.accent{color:#e63b00}.muted{color:var(--muted)}.cta{display:flex;gap:10px;margin-top:10px}
 
 /* Buttons */
 .btn{background:linear-gradient(180deg,var(--brand),var(--brand2));color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;text-decoration:none;display:inline-block;box-shadow:0 8px 20px rgba(255,107,0,.25);transition:transform .15s ease, box-shadow .15s ease}
 .btn:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(255,107,0,.35)}
-.btn-outline{background:transparent;color:#0b3d66;border:1px solid #9bd0ff;border-radius:10px;padding:10px 14px;text-decoration:none}
-.btn-outline:hover{background:#eef6ff}
+.btn-outline{background:transparent;color:var(--link);border:1px solid #9bd0ff;border-radius:10px;padding:10px 14px;text-decoration:none}
+.btn-outline:hover{background:rgba(147,197,253,.2)}
 
 /* Sections */
 .section{margin:30px 0}.section-title{margin:0 0 12px;font-size:24px;font-weight:800}
 .badges{display:flex;flex-wrap:wrap;gap:10px}
-.badge{background:#fff;border:1px solid var(--border);border-radius:999px;padding:8px 12px;box-shadow:0 6px 16px rgba(12,26,75,.06);font-weight:600}
+.badge{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:8px 12px;box-shadow:0 6px 16px rgba(12,26,75,.06);font-weight:600}
 
 /* Cards grid */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -49,11 +63,15 @@ nav a.active{background:#eaf3ff}
 .actions{display:flex;gap:10px}
 
 /* CTA */
-.cta-banner{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--border);background:#fff;border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(12,26,75,.06)}
+.cta-banner{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--border);background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(12,26,75,.06)}
+
+/* Form */
+.form label{display:block;margin:12px 0 6px;font-weight:600}
+.form input,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fbfcfe}
+body.dark .form input, body.dark .form textarea{background:#0b1220;color:var(--text)}
 
 /* Footer */
-.footer{border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;color:#6b7280}
-.footer .links a{color:#0b3d66;text-decoration:none;margin-left:10px}
+.footer{border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted)}
 
 /* Animations */
 .fade{opacity:0;transform:translateY(10px);transition:all .5s ease}
@@ -62,7 +80,7 @@ nav a.active{background:#eaf3ff}
 /* Responsive */
 @media (max-width:720px){
   .menu{display:block}
-  nav{display:none;flex-direction:column;position:absolute;right:20px;top:64px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px;box-shadow:0 10px 28px rgba(12,26,75,.12)}
+  nav{display:none;flex-direction:column;position:absolute;right:20px;top:64px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px;box-shadow:0 10px 28px rgba(12,26,75,.12)}
   nav.show{display:flex}
   .hero{flex-direction:column;align-items:flex-start}
   .cta-banner{flex-direction:column;align-items:flex-start}
